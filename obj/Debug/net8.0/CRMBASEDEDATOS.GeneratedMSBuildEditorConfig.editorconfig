@@ -1,0 +1,175 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CRMBASEDEDATOS
+build_property.RootNamespace = CRMBASEDEDATOS
+build_property.ProjectDir = E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\CRMBASEDEDATOS\CRMBASEDEDATOS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\CRMBASEDEDATOS\CRMBASEDEDATOS
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Citas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Citas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Citas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Citas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Citas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Cursoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Cursoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Cursoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Cursoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Cursoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3Vyc29lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/InscripcionCursoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpcGNpb25DdXJzb2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/InscripcionCursoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpcGNpb25DdXJzb2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/InscripcionCursoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpcGNpb25DdXJzb2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/InscripcionCursoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpcGNpb25DdXJzb2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/InscripcionCursoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY3JpcGNpb25DdXJzb2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Promociones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Promociones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Promociones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Promociones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Promociones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Tratamiento/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdGFtaWVudG9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Tratamiento/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdGFtaWVudG9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Tratamiento/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdGFtaWVudG9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Tratamiento/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdGFtaWVudG9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Tratamiento/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdGFtaWVudG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Documents/Luis Hernandez/7° Semestre/gestion/programa/CRMBASEDEDATOS/CRMBASEDEDATOS/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-d2kktfohyj
