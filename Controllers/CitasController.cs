@@ -49,9 +49,9 @@ namespace CRMBASEDEDATOS.Controllers
         // GET: Citas/Create
         public IActionResult Create()
         {
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente");
-            ViewData["IdPromocion"] = new SelectList(_context.Promociones, "IdPromocion", "IdPromocion");
-            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "IdTratamiento");
+            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "Nombre");
+            ViewData["IdPromocion"] = new SelectList(_context.Promociones, "IdPromocion", "Nombre");
+            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "Nombre");
             return View();
         }
 
@@ -62,16 +62,11 @@ namespace CRMBASEDEDATOS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdCita,IdCliente,IdTratamiento,IdPromocion,Fecha,Precio,Estatus")] Cita cita)
         {
-            if (ModelState.IsValid)
-            {
+
                 _context.Add(cita);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente", cita.IdCliente);
-            ViewData["IdPromocion"] = new SelectList(_context.Promociones, "IdPromocion", "IdPromocion", cita.IdPromocion);
-            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "IdTratamiento", cita.IdTratamiento);
-            return View(cita);
+
         }
 
         // GET: Citas/Edit/5
@@ -87,9 +82,9 @@ namespace CRMBASEDEDATOS.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente", cita.IdCliente);
-            ViewData["IdPromocion"] = new SelectList(_context.Promociones, "IdPromocion", "IdPromocion", cita.IdPromocion);
-            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "IdTratamiento", cita.IdTratamiento);
+            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "Nombre", cita.IdCliente);
+            ViewData["IdPromocion"] = new SelectList(_context.Promociones, "IdPromocion", "Nombre", cita.IdPromocion);
+            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "Nombre", cita.IdTratamiento);
             return View(cita);
         }
 
@@ -105,8 +100,7 @@ namespace CRMBASEDEDATOS.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+
                 try
                 {
                     _context.Update(cita);
@@ -124,11 +118,7 @@ namespace CRMBASEDEDATOS.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente", cita.IdCliente);
-            ViewData["IdPromocion"] = new SelectList(_context.Promociones, "IdPromocion", "IdPromocion", cita.IdPromocion);
-            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "IdTratamiento", cita.IdTratamiento);
-            return View(cita);
+
         }
 
         // GET: Citas/Delete/5

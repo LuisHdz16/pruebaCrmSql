@@ -1,64 +1,79 @@
 ﻿@model CRMBASEDEDATOS.Models.InscripcionCurso
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Inscripción de Curso";
 }
 
-<h1>Edit</h1>
+<h1>@ViewData["Title"]</h1>
 
-<h4>InscripcionCurso</h4>
+<h4>Inscripción de Curso</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6 col-lg-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdInscripcion" />
-            <div class="form-group">
-                <label asp-for="IdCliente" class="control-label"></label>
-                <select asp-for="IdCliente" class="form-control" asp-items="ViewBag.IdCliente"></select>
+
+            <div class="mb-3">
+                <label asp-for="IdCliente" class="control-label">Cliente</label>
+                <select asp-for="IdCliente" class="form-control" asp-items="ViewBag.IdCliente" required>
+                    <option>Seleccione una opción...</option>
+                </select>
                 <span asp-validation-for="IdCliente" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IdCurso" class="control-label"></label>
-                <select asp-for="IdCurso" class="form-control" asp-items="ViewBag.IdCurso"></select>
+
+            <div class="mb-3">
+                <label asp-for="IdCurso" class="control-label">Curso</label>
+                <select asp-for="IdCurso" class="form-control" asp-items="ViewBag.IdCurso" required>
+                    <option>Seleccione una opción...</option>
+                </select>
                 <span asp-validation-for="IdCurso" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="FechaInicio" class="control-label"></label>
-                <input asp-for="FechaInicio" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="FechaInicio" class="control-label">Fecha de Inicio</label>
+                <input asp-for="FechaInicio" class="form-control" type="date" required />
                 <span asp-validation-for="FechaInicio" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="FechaFin" class="control-label"></label>
-                <input asp-for="FechaFin" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="FechaFin" class="control-label">Fecha de Fin</label>
+                <input asp-for="FechaFin" class="form-control" type="date" required />
                 <span asp-validation-for="FechaFin" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Duracion" class="control-label"></label>
-                <input asp-for="Duracion" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="Duracion" class="control-label">Duración (días)</label>
+                <input asp-for="Duracion" class="form-control" type="number" min="1" required />
                 <span asp-validation-for="Duracion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="PrecioTotal" class="control-label"></label>
-                <input asp-for="PrecioTotal" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="PrecioTotal" class="control-label">Precio Total</label>
+                <input asp-for="PrecioTotal" class="form-control" type="number" step="0.01" min="0" required />
                 <span asp-validation-for="PrecioTotal" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Estatus" class="control-label"></label>
-                <input asp-for="Estatus" class="form-control" />
+
+            <div class="mb-3">
+                <label asp-for="Estatus" class="control-label">Estatus</label>
+                <select asp-for="Estatus" class="form-control" required>
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                </select>
                 <span asp-validation-for="Estatus" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

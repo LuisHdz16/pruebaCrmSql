@@ -19,9 +19,30 @@ namespace CRMBASEDEDATOS.Controllers
         }
 
         // GET: Clientes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string campo, string buscar)
         {
-            return View(await _context.Clientes.ToListAsync());
+            var clientes = from cliente in _context.Clientes select cliente;
+
+            if (!String.IsNullOrEmpty(buscar))
+            {
+                switch (campo)
+                {
+                    case "Nombre":
+                        clientes = clientes.Where(c => c.Nombre.Contains(buscar));
+                        break;
+                    case "Apellido":
+                        clientes = clientes.Where(c => c.Apellidos.Contains(buscar));
+                        break;
+                    case "Correo":
+                        clientes = clientes.Where(c => c.Correo.Contains(buscar));
+                        break;
+                    case "Telefono":
+                        clientes = clientes.Where(c => c.Telefono.Contains(buscar));
+                        break;
+                }
+            }
+
+            return View(await clientes.ToListAsync());
         }
 
         // GET: Clientes/Details/5

@@ -1,0 +1,18 @@
+﻿#sidebar {
+    background-color: #343a40;
+    color: white;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+    #sidebar .nav-link {
+        color: white;
+    }
+
+        #sidebar .nav-link:hover {
+            color: #ffc107;
+        }
+
+#main-content {
+    padding: 20px;
+}

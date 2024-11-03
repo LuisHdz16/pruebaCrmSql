@@ -48,10 +48,12 @@ namespace CRMBASEDEDATOS.Controllers
         // GET: InscripcionCursoes/Create
         public IActionResult Create()
         {
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente");
-            ViewData["IdCurso"] = new SelectList(_context.Cursos, "IdCurso", "IdCurso");
+            // Cambia "IdTratamiento" a "Nombre" para mostrar los nombres en la lista
+            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "Nombre");
+            ViewData["IdCurso"] = new SelectList(_context.Cursos, "IdCurso", "Nombre");
             return View();
         }
+
 
         // POST: InscripcionCursoes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -60,15 +62,16 @@ namespace CRMBASEDEDATOS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdInscripcion,IdCliente,IdCurso,FechaInicio,FechaFin,Duracion,PrecioTotal,Estatus")] InscripcionCurso inscripcionCurso)
         {
-            if (ModelState.IsValid)
+            var cli = await _context.Clientes.FirstOrDefaultAsync(m => m.IdCliente == inscripcionCurso.IdCliente);
+            if (cli != null)
             {
+                inscripcionCurso.IdClienteNavigation = cli;
+            }    
+
                 _context.Add(inscripcionCurso);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente", inscripcionCurso.IdCliente);
-            ViewData["IdCurso"] = new SelectList(_context.Cursos, "IdCurso", "IdCurso", inscripcionCurso.IdCurso);
-            return View(inscripcionCurso);
+
         }
 
         // GET: InscripcionCursoes/Edit/5

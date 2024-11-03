@@ -58,24 +58,13 @@ namespace CRMBASEDEDATOS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPromocion,IdTratamiento,Nombre,Descripcion,Estatus")] Promocione promocione)
+        public async Task<IActionResult> Create([Bind("IdPromocion,IdTratamiento,Nombre,Descripcion,Estatus, IdTratamientoNavigation")] Promocione promocione)
         {
-            if (ModelState.IsValid)
-            {
+
                 _context.Add(promocione);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
 
-            // Si el ModelState no es válido, imprime los errores
-            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
-            foreach (var error in errors)
-            {
-                Console.WriteLine(error);  // Esto imprimirá los errores en la consola de salida del servidor
-            }
-
-            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "Nombre", promocione.IdTratamiento);
-            return View(promocione);
         }
 
 
@@ -92,7 +81,7 @@ namespace CRMBASEDEDATOS.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "IdTratamiento", promocione.IdTratamiento);
+            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "Nombre", promocione.IdTratamiento);
             return View(promocione);
         }
 
@@ -128,7 +117,7 @@ namespace CRMBASEDEDATOS.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "IdTratamiento", promocione.IdTratamiento);
+            ViewData["IdTratamiento"] = new SelectList(_context.Tratamientos, "IdTratamiento", "Nombre", promocione.IdTratamiento);
             return View(promocione);
         }
 

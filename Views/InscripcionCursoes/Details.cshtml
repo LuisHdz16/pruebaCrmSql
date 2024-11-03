@@ -1,60 +1,70 @@
 ﻿@model CRMBASEDEDATOS.Models.InscripcionCurso
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles de Inscripción de Curso";
 }
 
-<h1>Details</h1>
+<h1>@ViewData["Title"]</h1>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h4>Detalles de la Inscripción de Curso</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3 fw-bold">
+                Cliente
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.IdClienteNavigation.Nombre)
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">
+                Curso
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.IdCursoNavigation.Nombre)
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">
+                Fecha de Inicio
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.FechaInicio)
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">
+                Fecha de Fin
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.FechaFin)
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">
+                Duración (días)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Duracion)
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">
+                Precio Total
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.PrecioTotal)
+            </dd>
+
+            <dt class="col-sm-3 fw-bold">
+                Estatus
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Estatus)
+            </dd>
+        </dl>
+    </div>
+</div>
 
 <div>
-    <h4>InscripcionCurso</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaInicio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaInicio)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaFin)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaFin)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Duracion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Duracion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PrecioTotal)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PrecioTotal)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estatus)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estatus)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdClienteNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdClienteNavigation.IdCliente)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdCursoNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdCursoNavigation.IdCurso)
-        </dd>
-    </dl>
+    <a asp-action="Edit" asp-route-id="@Model?.IdInscripcion" class="btn btn-warning">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdInscripcion">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+

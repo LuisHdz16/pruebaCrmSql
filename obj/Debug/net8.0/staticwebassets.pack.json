@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\CRMBASEDEDATOS.bundle.scp.css"
     },
     {
+      "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\CRMBASEDEDATOS\\CRMBASEDEDATOS\\wwwroot\\css\\Layout.css",
+      "PackagePath": "staticwebassets\\css\\Layout.css"
+    },
+    {
       "Id": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\CRMBASEDEDATOS\\CRMBASEDEDATOS\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

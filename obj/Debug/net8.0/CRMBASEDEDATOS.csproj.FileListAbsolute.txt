@@ -256,3 +256,4 @@ E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\CRMBASEDEDATOS\CRMBASE
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\CRMBASEDEDATOS\CRMBASEDEDATOS\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\CRMBASEDEDATOS\CRMBASEDEDATOS\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\CRMBASEDEDATOS\CRMBASEDEDATOS\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+E:\Documents\Luis Hernandez\7° Semestre\gestion\programa\CRMBASEDEDATOS\CRMBASEDEDATOS\obj\Debug\net8.0\CRMBASEDEDATOS.sourcelink.json

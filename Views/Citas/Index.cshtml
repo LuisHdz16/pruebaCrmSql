@@ -4,62 +4,45 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="mb-4">@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary mb-3">Crear Nueva Cita</a>
 </p>
-<table class="table">
-    <thead>
+
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Fecha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Precio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estatus)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdClienteNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdPromocionNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdTratamientoNavigation)
-            </th>
-            <th></th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Tratamiento</th>
+            <th scope="col">Promoción</th>
+            <th scope="col">Fecha y Hora</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Estatus</th>
+            <th scope="col" class="text-center">Acciones</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fecha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Precio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estatus)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdClienteNavigation.IdCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdPromocionNavigation.IdPromocion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdTratamientoNavigation.IdTratamiento)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdCita">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdCita">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdCita">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.IdClienteNavigation.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.IdTratamientoNavigation.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.IdPromocionNavigation.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Fecha)</td>
+                <td>@Html.DisplayFor(modelItem => item.Precio)</td>
+                <td>@Html.DisplayFor(modelItem => item.Estatus)</td>
+                <td class="text-center">
+                    <a asp-action="Edit" asp-route-id="@item.IdCita" class="btn btn-sm btn-warning me-1">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.IdCita" class="btn btn-sm btn-info me-1">Detalles</a>
+                    <a asp-action="Delete" asp-route-id="@item.IdCita" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

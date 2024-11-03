@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WZEJ0NAGWSae+CkjDPDbD3kM3irtMMo1YWH2dMoF2+s=",
+  "Hash": "gr8DdZxwqDjz/HjIcf7RE6HVxco9THDOG0mmQohdQCk=",
   "Source": "CRMBASEDEDATOS",
   "BasePath": "_content/CRMBASEDEDATOS",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\CRMBASEDEDATOS\\CRMBASEDEDATOS\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CRMBASEDEDATOS.bundle.scp.css"
+    },
+    {
+      "Identity": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\CRMBASEDEDATOS\\CRMBASEDEDATOS\\wwwroot\\css\\Layout.css",
+      "SourceId": "CRMBASEDEDATOS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\CRMBASEDEDATOS\\CRMBASEDEDATOS\\wwwroot\\",
+      "BasePath": "_content/CRMBASEDEDATOS",
+      "RelativePath": "css/Layout.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Layout.css"
     },
     {
       "Identity": "E:\\Documents\\Luis Hernandez\\7° Semestre\\gestion\\programa\\CRMBASEDEDATOS\\CRMBASEDEDATOS\\wwwroot\\css\\site.css",
