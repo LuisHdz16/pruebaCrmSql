@@ -1,6 +1,5 @@
 using CRMBASEDEDATOS.Models;
 using Microsoft.Extensions.Configuration;
-using CRMBASEDEDATOS.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

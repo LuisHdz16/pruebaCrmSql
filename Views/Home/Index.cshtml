@@ -1,8 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model CRMBASEDEDATOS.Models.DashboardViewModel  // Cambia a un solo objeto
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Inicio</h1>
+
+<h2>Citas de Hoy</h2>
+<ul>
+    @foreach (var cita in Model.CitasHoy)
+    {
+        <li>@cita.IdCliente (Fecha: @cita.Fecha)</li>
+    }
+</ul>
+
+<h2>Promociones Activas</h2>
+<ul>
+    @foreach (var promocion in Model.PromocionesActivas)
+    {
+        <li>@promocion.Descripcion (Válida hasta: @promocion.Estatus)</li>
+    }
+</ul>

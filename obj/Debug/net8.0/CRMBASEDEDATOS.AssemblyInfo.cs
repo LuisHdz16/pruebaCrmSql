@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRMBASEDEDATOS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76c8fe1db082a90d3577a37385a84877c27cae52")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68ec912a3a30582bfdcc3ee5db5f6f28a0e771be")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRMBASEDEDATOS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRMBASEDEDATOS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
