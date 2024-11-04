@@ -19,8 +19,9 @@ namespace CRMBASEDEDATOS.Controllers
         }
 
         // GET: Clientes
-        public async Task<IActionResult> Index(string campo, string buscar)
+        public async Task<IActionResult> Index(string campo, string buscar, int page = 1)
         {
+            int pageSize = 5;
             var clientes = from cliente in _context.Clientes select cliente;
 
             if (!String.IsNullOrEmpty(buscar))
@@ -41,8 +42,16 @@ namespace CRMBASEDEDATOS.Controllers
                         break;
                 }
             }
+            int totalCount = await clientes.CountAsync();
+            var clientesPaginated = await clientes
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
 
-            return View(await clientes.ToListAsync());
+            ViewBag.TotalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+            ViewBag.CurrentPage = page;
+
+            return View(clientesPaginated);
         }
 
         // GET: Clientes/Details/5

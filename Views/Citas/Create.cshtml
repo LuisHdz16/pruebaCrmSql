@@ -16,24 +16,25 @@
             <div class="form-group mb-3">
                 <label asp-for="IdCliente" class="control-label"></label>
                 <select asp-for="IdCliente" class="form-control" asp-items="ViewBag.IdCliente">
-                    <option>Seleccione una opción....</option>
-
+                    <option value="" selected>Seleccione una opción....</option>
                 </select>
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="IdTratamiento" class="control-label"></label>
                 <select asp-for="IdTratamiento" class="form-control" asp-items="ViewBag.IdTratamiento">
-                    <option>Seleccione una opción....</option>
-
+                    <option value="" selected>Seleccione una opción....</option>
                 </select>
+                <span asp-validation-for="IdTratamiento" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
                 <label asp-for="IdPromocion" class="control-label"></label>
                 <select asp-for="IdPromocion" class="form-control" asp-items="ViewBag.IdPromocion">
-                    <option>Seleccione una opción....</option>
+                    <option selected>Seleccione una opción....</option>
                 </select>
+                <span asp-validation-for="IdPromocion" class="text-danger"></span>
             </div>
 
             <div class="form-group mb-3">
@@ -58,15 +59,12 @@
                 <span asp-validation-for="Estatus" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <input type="submit" value="Crear" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
             </div>
         </form>
     </div>
-</div>
-
-<div class="mt-3">
-    <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
 </div>
 
 @section Scripts {

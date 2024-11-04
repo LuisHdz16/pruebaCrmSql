@@ -19,12 +19,45 @@ namespace CRMBASEDEDATOS.Controllers
         }
 
         // GET: Promociones
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string campo, string buscar, int page = 1)
         {
-            var crmContext = _context.Promociones.Include(p => p.IdTratamientoNavigation);
-            return View(await crmContext.ToListAsync());
-        }
+            int pageSize = 10; // Cambia esto a 10 si deseas mostrar hasta 10 elementos por página
+            var promociones = _context.Promociones.Include(p => p.IdTratamientoNavigation).AsQueryable(); // Usa AsQueryable para que puedas aplicar filtros posteriormente
 
+            // Filtrar promociones según el campo y término de búsqueda
+            if (!String.IsNullOrEmpty(buscar))
+            {
+                switch (campo)
+                {
+                    case "IdTratamientoNavigation.Nombre":
+                        promociones = promociones.Where(c => c.IdTratamientoNavigation.Nombre.Contains(buscar));
+                        break;
+                    case "Nombre":
+                        promociones = promociones.Where(c => c.Nombre.Contains(buscar));
+                        break;
+                    case "Estatus":
+                        promociones = promociones.Where(c => c.Estatus.Contains(buscar));
+                        break;
+                    default:
+                        break; // Si no coincide, no aplicamos ningún filtro adicional
+                }
+            }
+
+            // Contar el total de elementos después de aplicar los filtros
+            int totalCount = await promociones.CountAsync();
+
+            // Obtener las promociones paginadas
+            var promocionesPaginated = await promociones
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            // Calcular el total de páginas y la página actual
+            ViewBag.TotalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+            ViewBag.CurrentPage = page;
+
+            return View(promocionesPaginated);
+        }
         // GET: Promociones/Details/5
         public async Task<IActionResult> Details(int? id)
         {

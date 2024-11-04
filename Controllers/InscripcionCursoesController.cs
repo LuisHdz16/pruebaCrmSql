@@ -19,11 +19,56 @@ namespace CRMBASEDEDATOS.Controllers
         }
 
         // GET: InscripcionCursoes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string campo, string buscar, int page = 1)
         {
-            var crmContext = _context.InscripcionCursos.Include(i => i.IdClienteNavigation).Include(i => i.IdCursoNavigation);
-            return View(await crmContext.ToListAsync());
+            int pageSize = 10; // Cambia esto a 10 si deseas mostrar hasta 10 elementos por página
+            var inscripciones = _context.InscripcionCursos
+                .Include(i => i.IdClienteNavigation)
+                .Include(i => i.IdCursoNavigation)
+                .AsQueryable(); // Usa AsQueryable para que puedas aplicar filtros posteriormente
+
+            // Filtrar inscripciones según el campo y término de búsqueda
+            if (!String.IsNullOrEmpty(buscar))
+            {
+                switch (campo)
+                {
+                    case "IdClienteNavigation.Nombre":
+                        inscripciones = inscripciones.Where(i => i.IdClienteNavigation.Nombre.Contains(buscar));
+                        break;
+                    case "IdCursoNavigation.Nombre":
+                        inscripciones = inscripciones.Where(i => i.IdCursoNavigation.Nombre.Contains(buscar));
+                        break;
+                    case "FechaInicio":
+                        if (DateTime.TryParse(buscar, out DateTime fechaInicioBuscada))
+                        {
+                            var fechaInicio = DateOnly.FromDateTime(fechaInicioBuscada);
+                            inscripciones = inscripciones.Where(i => i.FechaInicio == fechaInicio);
+                        }
+                        break;
+                    case "Estatus":
+                        inscripciones = inscripciones.Where(i => i.Estatus.Contains(buscar));
+                        break;
+                    default:
+                        break; // Si no coincide, no aplicamos ningún filtro adicional
+                }
+            }
+
+            // Contar el total de elementos después de aplicar los filtros
+            int totalCount = await inscripciones.CountAsync();
+
+            // Obtener las inscripciones paginadas
+            var inscripcionesPaginated = await inscripciones
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            // Calcular el total de páginas y la página actual
+            ViewBag.TotalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+            ViewBag.CurrentPage = page;
+
+            return View(inscripcionesPaginated);
         }
+
 
         // GET: InscripcionCursoes/Details/5
         public async Task<IActionResult> Details(int? id)

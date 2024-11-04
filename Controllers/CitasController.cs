@@ -19,11 +19,61 @@ namespace CRMBASEDEDATOS.Controllers
         }
 
         // GET: Citas
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string campo, string buscar, int page = 1)
         {
-            var crmContext = _context.Citas.Include(c => c.IdClienteNavigation).Include(c => c.IdPromocionNavigation).Include(c => c.IdTratamientoNavigation);
-            return View(await crmContext.ToListAsync());
+            int pageSize = 10; // Cambia esto a 10 si deseas mostrar hasta 10 elementos por página
+            var citas = _context.Citas
+                .Include(c => c.IdClienteNavigation)
+                .Include(c => c.IdTratamientoNavigation)
+                .Include(c => c.IdPromocionNavigation)
+                .AsQueryable(); // Usa AsQueryable para que puedas aplicar filtros posteriormente
+
+            // Filtrar citas según el campo y término de búsqueda
+            if (!String.IsNullOrEmpty(buscar))
+            {
+                switch (campo)
+                {
+                    case "IdClienteNavigation.Nombre":
+                        citas = citas.Where(c => c.IdClienteNavigation.Nombre.Contains(buscar));
+                        break;
+                    case "IdTratamientoNavigation.Nombre":
+                        citas = citas.Where(c => c.IdTratamientoNavigation.Nombre.Contains(buscar));
+                        break;
+                    case "IdPromocionNavigation.Nombre":
+                        citas = citas.Where(c => c.IdPromocionNavigation.Nombre.Contains(buscar));
+                        break;
+                    case "Fecha":
+                        if (DateTime.TryParse(buscar, out DateTime fechaBuscada))
+                        {
+                            var fechaInicio = fechaBuscada.Date;
+                            var fechaFin = fechaBuscada.Date.AddDays(1); // Día siguiente para definir el rango
+                            citas = citas.Where(c => c.Fecha >= fechaInicio && c.Fecha < fechaFin);
+                        }
+                        break;
+                    case "Estatus":
+                        citas = citas.Where(c => c.Estatus.Contains(buscar));
+                        break;
+                    default:
+                        break; // Si no coincide, no aplicamos ningún filtro adicional
+                }
+            }
+
+            // Contar el total de elementos después de aplicar los filtros
+            int totalCount = await citas.CountAsync();
+
+            // Obtener las citas paginadas
+            var citasPaginated = await citas
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            // Calcular el total de páginas y la página actual
+            ViewBag.TotalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+            ViewBag.CurrentPage = page;
+
+            return View(citasPaginated);
         }
+
 
         // GET: Citas/Details/5
         public async Task<IActionResult> Details(int? id)

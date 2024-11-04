@@ -62,3 +62,14 @@
         }
     </tbody>
 </table>
+
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@i" asp-route-buscar="@ViewData["BuscarTermino"]">@i</a>
+            </li>
+        }
+    </ul>
+</nav>
